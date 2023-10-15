@@ -8,7 +8,8 @@ library(lubridate)
 # Load and pre-process data
 wbd <- read.delim(here("weight_data.txt"), sep = " ", header = F, col.names = c("Date", "Time", "Liam")) %>% 
   mutate(Date = as.numeric(as.Date(Date)-19492),
-         Time = as.ITime(x = Time))
+         Time = as.ITime(x = Time)) %>% 
+  filter(Date < 94)
 
 # Model weight change by day
 mod <- lm(Liam ~ Date, wbd)
