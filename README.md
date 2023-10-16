@@ -7,4 +7,4 @@ Here is the analysis so far from May 16 to October 15, 2023:
 -  Interestingly, my weight in the early mornings is much higher than later in the day, the beta for time (hours) was -0.11 lbs. Assuming a linear response, my weight decreases by 0.11 lbs per hour, however, this doesn't take into account the rhythmic nature of weight by hour/minute.
 
 The next iteration of the model will include a mathematical adjustment for circadian rhythms.
-[weight.pdf](https://github.com/liamg15/weight/files/12920650/weight.pdf)
+![weight](https://github.com/liamg15/weight/assets/71047301/299bfa58-d454-465d-8097-c2a8eb02a730)
