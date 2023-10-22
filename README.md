@@ -4,7 +4,7 @@ Monitoring my weight, recording every time I go to the gym.
 Here is the analysis so far from May 16 to October 22, 2023:
 
 ## 1. Weight distribution
-- My mean (purple dashed) and median (orange dashed) weight throughout May 16 - the most recent data point is 164.0 and 164.7 lbs, respectively.
+- My mean (purple dashed) and median (orange dashed) weight throughout May 16 - the most recent data point is 165.0 and 164.7 lbs, respectively.
 <p> <img src="wdist1.png" width = "600"></p>
 <b>Figure 1. Weight distribution and kernel density (mean: purple, median: darkorange).</b></p>
 
