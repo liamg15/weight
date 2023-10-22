@@ -6,7 +6,6 @@ library(data.table)
 library(lubridate)
 library(ggsci)
 library(ggpubr)
-library(cairoDevice)
 
 # Load and pre-process data
 wbd <- read.delim(here("weight_data.txt"), sep = " ", header = F, col.names = c("Date", "Time", "Liam")) %>% 
@@ -41,7 +40,7 @@ wbd1 <- wbd %>%
                              "Night (6:00-8:59PM)",'Night (9:00-11:59PM)'))) 
 
 # Distribution of weight
-caircairo_png("wdist.png", bg = NA, res = 600,units = "in", width = 4, height = 2)
+png("wdist.png", bg = NA, res = 600,units = "in", width = 3, height = 4, type = "cairo")
 hist(wbd1$Liam, 
      cex.lab=0.75, cex.axis=0.5,
      title = NA,
