@@ -6,6 +6,7 @@ library(data.table)
 library(lubridate)
 library(ggsci)
 library(ggpubr)
+library(cairoDevice)
 
 # Load and pre-process data
 wbd <- read.delim(here("weight_data.txt"), sep = " ", header = F, col.names = c("Date", "Time", "Liam")) %>% 
@@ -40,18 +41,24 @@ wbd1 <- wbd %>%
                              "Night (6:00-8:59PM)",'Night (9:00-11:59PM)'))) 
 
 # Distribution of weight
-plot.new()
+caircairo_png("wdist.png", bg = NA, res = 600,units = "in", width = 4, height = 2)
 hist(wbd1$Liam, 
+     cex.lab=0.75, cex.axis=0.5,
+     title = NA,
      breaks = 20,
-     col="grey",
-     border="black",
-     prob = TRUE,
+     col= adjustcolor("white", alpha = 0),
+     border= adjustcolor("black", alpha = 0.3),
+     prob = T,
+     ylim = c(0,0.4),
+     xlim = c(160,173),
      xlab = "weight",
-     main = "Weight Distribution")
+     main = NA)
 lines(density(wbd1$Liam),
       lwd = 2,
-      col = "blue")
-
+      border= adjustcolor("black", alpha = 0.1))
+abline(v = median(wbd1$Liam),col = adjustcolor("darkorange", alpha = 0.7), lty = 2)
+abline(v = mean(wbd1$Liam),col = adjustcolor("purple", alpha = 0.7), lty = 2)
+dev.off()
 shapiro.test(wbd1$Liam) # Roughly normally distributed? according the Shapiro-Wilks test for normality although it looks skewed. 
 
 # Plot weight by day
