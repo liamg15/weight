@@ -40,7 +40,7 @@ wbd1 <- wbd %>%
                              "Night (6:00-8:59PM)",'Night (9:00-11:59PM)'))) 
 
 # Distribution of weight
-png("wdist.png", bg = NA, res = 600,units = "in", width = 3, height = 4, type = "cairo")
+png("wdist.png", bg = NA, res = 600,units = "in", width = 3, height = 3, type = "cairo")
 hist(wbd1$Liam, 
      cex.lab=0.75, cex.axis=0.5,
      title = NA,
