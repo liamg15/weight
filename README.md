@@ -10,7 +10,7 @@ Here is the analysis so far from May 16 to October 22, 2023:
 
 ## 2. Time-series analysis of weight by day
 -  According to this linear regression model of date and time with weight as the outcome, I gained 0.0096 lbs every day since May 16, 2023.
--  At that rate, I would reach my goal of 170 lbs in 711 days (~ 2 years).
+-  At that rate, I would reach my goal of 170 lbs in 711 days (~ 2 years).. :neutral_face:
 -  Consistent with the circadian rhythm of weight, I'm heavier in the early mornings than later in the day.
 
 <p> <img src="weight.png" width = "1000">
